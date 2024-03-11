@@ -25,7 +25,17 @@ SECRET_KEY = 'django-insecure-n%2_zi-9wkc9_@cd06qo(@e#)8oz@uw3!#gbrh*@k)9wof6dw^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['RFTransmitter.com', 'localhost', '127.0.0.1', '192.168.1.75']
+
+#Rest Frame Work
+# REST_FRAMEWORK = {
+#     # Use Django's standard `django.contrib.auth` permissions,
+#     # or allow read-only access for unauthenticated users.
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ]
+# }
+
 
 
 # Application definition
@@ -37,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'RFTransmitter',
 ]
 
 MIDDLEWARE = [
