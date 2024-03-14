@@ -4,14 +4,17 @@ from django.db import models
 class UserProfile(models.Model):
     type = models.CharField(max_length=50)
     frequency = models.CharField(max_length = 20)
-    pwr = models.CharField(max_length = 100)
-    pw_usec = models.IntegerField()
+    pwr = models.IntegerField( null = True)
+    pw_usec = models.IntegerField( null = True)
+    status = models.CharField(max_length = 20, null = True)
+    pid = models.IntegerField( null = True )
 
 class LogTable(models.Model):
     type = models.CharField(max_length=50)
     frequency = models.CharField(max_length = 20)
-    pwr = models.CharField(max_length = 100)
-    pw_usec = models.IntegerField()
+    pwr = models.IntegerField(null = True)
+    pw_usec = models.IntegerField(null = True)
     action = models.CharField(max_length=30)
-    time_stamp = models.TimeField(auto_now_add = True)
+    timestamp = models.DateTimeField(auto_now=True)
+    
 
