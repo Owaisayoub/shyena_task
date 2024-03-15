@@ -2,10 +2,10 @@ from rest_framework import serializers
 from .models import *
 
 
-class UserProfileSeralizer(serializers.ModelSerializer):
+class ConfigTableSeralizer(serializers.ModelSerializer):
 
     class Meta:
-        model = UserProfile
+        model = ConfigTable
         fields =  '__all__'
 
         
